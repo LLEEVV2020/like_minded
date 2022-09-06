@@ -9,7 +9,7 @@ function ProjectManagementSystem(){
             <h2>Система управления проектами</h2> 
 
             <p>
-        Евгений Харитонов - 0 уровень <span style="{}">200 </span>
+        Евгений Харитонов - 0 уровень <span className="red">200 </span> баллов  <input type="text" value="100"></input> <button>add</button>  
     </p>
 
 {/*
