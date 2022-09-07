@@ -1,4 +1,6 @@
-
+import React from 'react';
+import Person from './ProjectManagementSystem/Person';
+import PercentPerson from './ProjectManagementSystem/PercentPerson'
 
 function ProjectManagementSystem(){
     return (
@@ -8,65 +10,26 @@ function ProjectManagementSystem(){
         <div>
             <h2>Система управления проектами</h2> 
 
-            <p>
-        Евгений Харитонов - 0 уровень <span className="red">200 </span> баллов  <input type="text" value="100"></input> <button>add</button>  
-    </p>
+            <Person name="Евгений Харитонов" point="200" />
+            <Person name="Евгения" point="100" />
+            <Person name="@IvanJoy_Cy" point="100" />
+            <Person name="@lewmilow" point="100" />
+            <Person name="@neuromance" point="100" />
+            <Person name="@Vl00l" point="100" />
 
-{/*
-            <p>
-        Евгений Харитонов - 0 уровень <span style="color: red;">200 </span>баллов  <input type="text" value="100"></input><button>add</button>    
-    </p>
-    
-    <p>
-        Евгения - 0 уровень <span style="color: red;">100 </span>баллов <input type="text" value="100" /><button>add</button>   
-    </p>
-    
-    <p>
-        @IvanJoy_Cy - 0 уровень <span style="color: red;">100 </span>баллов <input type="text" value="100"/><button>add</button>   
-    </p>
 
-    <p>
-        @lewmilow - 0 уровень <span style="color: red;">100 </span>баллов <input type="text" value="100"/><button>add</button>   
-    </p>
-    
-    <p>
-        @neuromance - 0 уровень <span style="color: red;">100 </span>баллов <input type="text" value="100"/><button>add</button>   
-    </p>
-    
-    <p>
-        @Vl00l - 0 уровень <span style="color: red;">100 </span>баллов <input type="text" value="100"/><button>add</button>   
-    </p>
+            <br/>
+            ИТОГО <span  className="red">700 </span>
 
-    <br/>
-    ИТОГО <span style="color: red;">700 </span>
+            <br/>
+            <h2>Процент каждого</h2>
 
-    <br/>
-    <h2>Процент каждого</h2>
-    <p>
-        Евгений Харитонов  - <span style="color: red;">??</span>%   
-    </p>
-    
-    <p>
-        Евгения  - <span style="color: red;">??</span>%    
-    </p>
-    
-    <p>
-        @IvanJoy_Cy  - <span style="color: red;">??</span>%  
-    </p>
-
-    <p>
-        @lewmilow  - <span style="color: red;">??</span>%     
-    </p>
-    
-    <p>
-        @neuromance  - <span style="color: red;">??</span>%   
-    </p>
-    
-    <p>
-        @Vl00l - <span style="color: red;">??</span>%   
-    </p>*/
-}
-
+            <PercentPerson name="Евгений Харитонов" percen="??" />
+            <PercentPerson name="Евгения" percen="??" />
+            <PercentPerson name="@IvanJoy_Cy" percen="??" />
+            <PercentPerson name="@lewmilow" percen="??" />
+            <PercentPerson name="@neuromance" percen="??" />
+            <PercentPerson name="@Vl00l" percen="??" />
             
         </div> 
 
