@@ -9,11 +9,15 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProjectManagementSystem> </ProjectManagementSystem>
+
+    <br />
+
+    <App  />
 
     <hr />
-    <br />
-    <App />
+
+    <ProjectManagementSystem> </ProjectManagementSystem>
+    
   </React.StrictMode>
 );
 
