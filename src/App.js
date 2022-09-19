@@ -94,6 +94,18 @@ class Add extends Component {
         
     }
 
+    componentDidMount(){
+        console.log('componentDidMount');
+        // fetch('/post')
+    }
+
+    componentDidUpdate(){
+        console.log('componentDidUpdate');
+    }
+
+    componentWillUnmount(){}
+
+
     render() {
         return (
         
@@ -101,10 +113,11 @@ class Add extends Component {
                 
                 <button onClick={this.increment} >Прибавить</button>
                 <span style={
-                    {
+                    /*{
                         margin: '0 2rem',
                         display: 'inline-block'
-                    }
+                    }*/
+                    countStyle
                 }>{this.state.count}</span>
                 <button onClick={this.decrement} >Отнять</button>
 
@@ -118,3 +131,8 @@ class Add extends Component {
 }
 
 export default Add;
+
+const countStyle = {
+    margin: '0 2rem',
+    display: 'inline-block'
+}

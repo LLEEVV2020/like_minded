@@ -1,3 +1,6 @@
 npx create-react-app
 
+// ресурс с json данными
+jsonplaceholder.typicode.com/posts
+
 
