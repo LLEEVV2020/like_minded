@@ -1,127 +1,41 @@
 import React, {Component} from "react";
+import  {Posts} from "./component/Posts";
 
-/**
- * constructor(props){
-        super(props);
-
-        this.state = {
-            count: 0
-        };
-    }
- */
 
 class Add extends Component {
 
-    
-
-    /*============================================*/ 
-    /*Это ноый подход, через стрелочную функцию,
-    почему то реакт считает его не надо, хотя все разработчики
-    его используют*/
-    /*state = {
-        count: 0
-    };
-
-    handleClick = () => {
-        
-        this.setState({
-            count: this.state.count + 1
-        })
-        
-        // редкий вариант
-        //this.setState(
-        //    (prevState) => ({count: prevState.count + 1}),
-        //    // колбек для того чтоб было вызвано после первого параметра
-        //    () => {
-        //        console.log("ну вот.")
-        //    }
-        //)
-    }*/
-
-    // Старая версия
-    /*constructor(){
-        super();
-
-        this.state = {
-            count: 0
-        };
-
-        this.handleClick = this.handleClick.bind(this);
-    }*/
-
-    /*increment () {
-        
-        this.setState({
-            count: this.state.count + 1
-        })
-        
-        // редкий вариант
-        //this.setState(
-        //    (prevState) => ({count: prevState.count + 1}),
-            // колбек для того чтоб было вызвано после первого параметра
-        //    () => {
-        //        console.log("ну вот.")
-        //    }
-        //)
-    }*/
-
 
     state = {
-        count: 0
+        posts: [
+            {id: 'abc1', name: 'JS Basics'}, 
+            {id: 'abc2', name: 'JS Advanced'},
+            {id: 'abc3', name: 'JS React'}
+            
+        ]
+            
     };
-
-    increment  = () =>  {
-        
-        this.setState({
-            count: this.state.count + 1
-        })
-        
-        // редкий вариант
-        /*this.setState(
-            (prevState) => ({count: prevState.count + 1}),
-            // колбек для того чтоб было вызвано после первого параметра
-            () => {
-                console.log("ну вот.")
-            }
-        )*/
-    }
-
-    decrement  = () =>  {
-        
-        this.setState({
-            count: this.state.count - 1
-        })
-        
-    }
-
-    componentDidMount(){
-        console.log('componentDidMount');
-        // fetch('/post')
-    }
-
-    componentDidUpdate(){
-        console.log('componentDidUpdate');
-    }
-
-    componentWillUnmount(){}
 
 
     render() {
         return (
         
             <div className="App">
+                {/*<h2>{this.state.posts[0].name}</h2>
+                <h2>{this.state.posts[1].name}</h2>
+                <h2>{this.state.posts[2].name}</h2>*/}
                 
-                <button onClick={this.increment} >Прибавить</button>
-                <span style={
-                    /*{
-                        margin: '0 2rem',
-                        display: 'inline-block'
-                    }*/
-                    countStyle
-                }>{this.state.count}</span>
-                <button onClick={this.decrement} >Отнять</button>
+                {
+                    /*this.state.posts.map(
+                        post => (
+                            <h2 key={post.id}>{post.name}</h2>
+                        )
+                        // (post, index) => (
+                        //   <h2 key={index}>{post.name}</h2>
+                        //)
+                    )*/
+                }
 
-                {/*<button onClick={() => this.setState({count: this.state.count + 1})} >{this.state.count}</button>*/}
+                <Posts posts={this.state.posts}/>
 
             </div>
             
